@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+<VBox alignment="center" prefWidth="300" spacing="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckBuildController">
+    <GridPane fx:id="buildCheckGp" alignment="CENTER" >
+    <Label text="" GridPane.columnIndex="3" GridPane.rowIndex="0" fx:id="missingBuildLbl" styleClass="root"/>
+        <Label GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <columnConstraints >
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints valignment="CENTER" />
+        </rowConstraints>
+    </GridPane>
+    <Button fx:id="closeBtn" text="Okay" onAction="#handleClose"/>
+</VBox>

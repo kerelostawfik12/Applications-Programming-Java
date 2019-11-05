@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefWidth="500" spacing="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CatalogueController">
+    <TableView fx:id="catalogueTv" styleClass="table-view">
+        <columns>
+        <TableColumn fx:id="typeClm" text="Type" />
+        <TableColumn fx:id="nameClm" text="Name" />
+        <TableColumn fx:id="priceClm" text="Price" />
+        </columns>
+    </TableView>
+    <Text styleClass="h2" text="Filters" />
+    <GridPane hgap="10" vgap="10">
+        <Label text="Type:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="typeFilterTf" onAction="#handleFilterType" prefWidth="385.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="0" />
+        <Label text="Price Range:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="minPriceFilterTf" prefHeight="23.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="to" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <TextField fx:id="maxPriceFilterTf" prefHeight="23.0" prefWidth="170.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+    <Button fx:id="addToBuildBtn" disable="true" onAction="#handleAddToBuild" text="Add Selected to Build" />
+    <Button fx:id="addToCatalogueBtn" onAction="#handleAddToCatalogue" text="Add New Part to Catalogue" />
+    <Button fx:id="removeFromCatalogueBtn" disable="true" onAction="#handleRemoveFromCatalogue" text="Remove Selected from Catalogue" />
+    <Button fx:id="closeBtn" onAction="#handleClose" styleClass="button" text="Close" />
+    <stylesheets>
+		<URL value="@computerbuilder.css" />
+	</stylesheets>
+
+
+</VBox>

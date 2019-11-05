@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      spacing="10" prefWidth="300" fx:controller="controller.AddToCatalogueController"
+>
+    <GridPane vgap ="10" hgap="10"  alignment="center"
+    >
+        <Label text="Type:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="partTypeTf" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="partNameTf" GridPane.rowIndex = "1" GridPane.columnIndex="1"/>
+        <Label text="Price:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="partPriceTf" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Button fx:id="addToCatalogueBtn" text = "Add to Catalogue" GridPane.rowIndex="3" GridPane.columnIndex = "1" onAction="#handleAdd"/>
+    </GridPane>
+
+
+	<stylesheets>
+		<URL value="@computerbuilder.css" />
+	</stylesheets>
+</VBox>
+
